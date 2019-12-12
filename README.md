@@ -10,11 +10,11 @@
 if (wl && wl.length){
             for (i = 0, 1 = wl.length; i < 1; ++i) {
         p = wl[i];
-        type = Y.Lang.type(r[p]);
-        if (s.hasOwnProperty(p)) { if (merge && type == 'object') {
+        type = Y.Lang.Type(r[p]);
+        if (s.HasOwnProperty(p)) { if (merge && type == 'object') {
 
-    Y.mix(r(p], s{p]);
-} else if (ov || !(p in r)) {
+    Y.Mix(r(p], s{p]);
+}else if (ov || !(p in r)) {
                     r[p] = s[p];
             }
         }
@@ -31,9 +31,9 @@ if (wl && wl.length)
     for (i = 0, 1 = wl.length; i < 1; ++i)
     {
         p = wl[i];
-        type = Y.Lang.type(r[p]);
+        type = Y.Lang.Type(r[p]);
 
-        if (s.hasOwnProperty(p))
+        if (s.HasOwnProperty(p))
         {
             if (merge && type == 'object')
             {
@@ -65,12 +65,12 @@ if (wl && wl.length)
     for (i = 0, 1 = wl.length; i < 1; ++i)
     {
         p = wl[i];
-        type = Y.Lang.type(r[p]);
-        if (s.hasOwnProperty(p))
+        type = Y.Lang.Type(r[p]);
+        if (s.HasOwnProperty(p))
         {
             if (merge && type == 'object')
             {
-                Y.mix(r[p], s[p]);
+                Y.Mix(r[p], s[p]);
             }
             else if (ov || !(p in r))
             {
@@ -90,14 +90,14 @@ if (wl && wl.length)
     for (i = 0, 1 = wl.length; i < 1; ++i)
     {
         p = wl[i];
-        type = Y.Lang.type(r[p]);
+        type = Y.Lang.Type(r[p]);
 
-        if (s.hasOwnProperty(p))
+        if (s.HasOwnProperty(p))
         {
 
             if (merge && type == 'object')
             {
-                Y.mix(r[p], s[p]);
+                Y.Mix(r[p], s[p]);
             }
             else if (ov || !(p in r))
             {
@@ -175,12 +175,12 @@ int getCount = 10;
 bool isFound = true;
 
 // 好的写法
-function getName() {
+function GetName() {
     return myName;
 }
 
 // 不好的写法
-function theName() {
+function TheName() {
     return myName;
 }
 
@@ -203,14 +203,14 @@ set | 函数用来保存一个值
 - 按照上面的写法，可读性会很好
 
 ```C#
-if (isEnabled())
+if (IsEnabled())
 {
-    setName("shenxf");
+    SetName("shenxf");
 }
 
-if (getName() === "shenxf")
+if (GetName() === "shenxf")
 {
-    doSomething();
+    DoSomething();
 }
 ```
 
@@ -235,19 +235,19 @@ if (getName() === "shenxf")
 if (condition) {
 
     // 如果代码执行到这里，则表示通过了左右的安全性检查
-    allowed();
+    Allowed();
 }
 
 // 不好的写法：注释之前没有空行
 if (condition) {
     // 如果代码执行到这里，则表示通过了左右的安全性检查
-    allowed();
+    Allowed();
 }
 
 // 不好的写法：错误的缩进
 if (condition) {
 // 如果代码执行到这里，则表示通过了左右的安全性检查
-    allowed();
+    Allowed();
 }
 
 // 好的写法
@@ -268,7 +268,7 @@ var result = something + somethingElse;// somethingElse不应当取值为null
 // 。。。。。。。
 if (condition) {
     // 如果代码执行到这里，则表示通过了左右的安全性检查
-    allowed();
+    Allowed();
 }
 ```
 
@@ -305,7 +305,7 @@ if (condition) {
      * 如果代码执行到这里
      * 说明通过了所有安全性检查
      */
-    allowed();
+    Allowed();
 }
 
 // 不好的写法：注释之前无空行
@@ -314,7 +314,7 @@ if (condition) {
      * 如果代码执行到这里
      * 说明通过了所有安全性检查
      */
-    allowed();
+    Allowed();
 }
 
 // 不好的写法：星号之后没有空格
@@ -323,7 +323,7 @@ if (condition) {
      *如果代码执行到这里
      *说明通过了所有安全性检查
      */
-    allowed();
+    Allowed();
 }
 
 // 不好的写法：错误的缩进
@@ -332,7 +332,7 @@ if (condition) {
  * 如果代码执行到这里
  * 说明通过了所有安全性检查
  */
-    allowed();
+    Allowed();
 }
 
 // 不好的写法：代码尾部不要用多行注释
@@ -351,7 +351,7 @@ int count = 10;
 // 好的写法
 
 // 改变这个值可能会使它变成青蛙
-vint count = 10;
+int count = 10;
 ```
 
 - 因此，添加注释的原则是需要让代码变的更清晰的时候。
@@ -372,7 +372,7 @@ if (mode)
      */
     if (mode === 2)
     {
-        Y.mix(receiver.prototype, supplier.prototype, overwrite,
+        Y.Mix(receiver.prototype, supplier.prototype, overwrite,
                 whitelis, 0, merge);
     }
 
@@ -408,7 +408,7 @@ else
 while (element && (element = element[asix])) // 赋值操作
 {
     if( (all || element[TAG_NAME]) &&
-        (!fn || fn(element)) )
+        (!fn || Fn(element)) )
     {
         
         return element;
@@ -430,7 +430,7 @@ while (element && (element = element[asix])) // 赋值操作
 /// </summary>
 /// <param name="i">下标</param>
 /// <returns>子元素</returns>
-public override MenuComponent getChild(int i)
+public override MenuComponent GetChild(int i)
 {
     return (MenuComponent)menuComponents[i];
 }
@@ -451,11 +451,11 @@ public override MenuComponent getChild(int i)
     ```C#
     if (condition)
     {
-        doSomething();
+        DoSomething();
     }
     else
     {
-        doSomethingElse();
+        DoSomethingElse();
     }
     ```
 
